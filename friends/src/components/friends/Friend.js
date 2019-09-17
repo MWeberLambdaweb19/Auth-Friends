@@ -7,7 +7,7 @@ const Friend = (props) => {
     const [friend] = useState(props.friend)
 
     const handleDelete = (id) => {
-        axiosWithAuth().delete(`http://localhost:5000/api/friends/${id}`)
+        axiosWithAuth().delete(`/api/friends/${id}`)
         .then(() => {
             window.location.reload();
         })
